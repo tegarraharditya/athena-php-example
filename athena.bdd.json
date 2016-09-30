@@ -1,0 +1,13 @@
+{
+  "selenium" : {
+    "hub_url" : "http://athena-selenium-hub:4444/wd/hub"
+  },
+  "report" : {
+    "format" : "html",
+    "outputDirectory" : "./Report/bdd"
+  },
+  "urls" : {
+    "/" : "http://www.olx.co.id",
+    "registration" : "/masuk/daftar"
+  }
+}

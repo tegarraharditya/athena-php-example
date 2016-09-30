@@ -1,0 +1,45 @@
+{
+  "selenium" : {
+    "hub_url" : "http://athena-selenium-hub:4444/wd/hub",
+    "chrome_options" :{
+          "arguments" : [
+            "--user-agent=Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36",
+            "--start-maximized"
+          ]
+        }
+
+  },
+  "proxy" : {
+    "connectTimeout" : 20000,
+    "readTimeout" : 20000,
+    "url" : "http://athena-proxy",
+    "port" : 9090,
+    "internalPort" : 9991,
+    "proxyType" : "manual",
+    "httpProxy" : "athena-proxy:9991",
+    "sslProxy" : "athena-proxy:9991",
+    "remapHosts" : {
+      "myolx.co.id": "192.168.98.192"
+    },
+    "backlist_urls" : {
+      ".*facebook.com" : 200,
+      ".*gemius\\..*" : 200,
+      ".*plus\\..*" : 200,
+      ".*optimizely\\..*" : 200,
+      ".*doubleclick.net" : 200,
+      ".*cedexis.com" : 200,
+      ".*optmizely.com" : 200,
+      ".*twitter.com" : 200
+    },
+    "recording" : true
+  },
+  "report" : {
+    "format" : "html",
+    "outputDirectory" : "./Report"
+  },
+  "urls" : {
+    "/" : "http://myolx.co.id",
+    "registration" : "/masuk/daftar"
+  },
+
+}
