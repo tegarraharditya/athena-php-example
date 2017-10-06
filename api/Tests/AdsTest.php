@@ -5,11 +5,11 @@ use Tests\api\Pages\AdsPage;
 
 /**
  * Created by PhpStorm.
- * User: suci
- * Date: 9/28/16
+ * User: Tegar
+ * Date: 9/28/17
  * Time: 5:29 PM
  */
-class AdsTest extends AthenaAPITestCase
+class AdsTest //extends AthenaAPITestCase
 {
     public function testGetAds_All_ReturnHttpCode200(){
         $adPage = new AdsPage();

@@ -12,24 +12,24 @@ namespace Tests\api\Pages;
 use Athena\Athena;
 use Athena\Page\BaseApiPage;
 
-class AdsPage extends BasePage
+class EmployeesPage extends BasePage
 {
-    public function getAllAds(){
-        return Athena::api()->get('/ads')
+    public function getAllEmp(){
+        return Athena::api()->get('/employees')
             ->then()
             ->retrieve();
     }
 
-    public function getSpecificAds($id){
-        return Athena::api()->get('/ads/'.$id)
+    public function getSpecificEmp($id){
+        return Athena::api()->get('/employees/'.$id)
             ->then()
             ->retrieve();
     }
 
-    public function postAds($bind){
+    public function postEmp($bind){
         $data = json_encode($bind);
 
-        return Athena::api()->post('/ads')
+        return Athena::api()->post('/employees')
             ->withBody($data,'application/json')
             ->then()
             ->retrieve();
@@ -37,12 +37,11 @@ class AdsPage extends BasePage
 
     public function getBindData(){
         $data = [
-            "title" => "ini adalah contoh",
-            "description" => "ini adalah post description",
-            "price" => 4500,
-            "seller" => "rahmat"
+            "id" => 53,
+            "first_name" => "Tegar",
+            "last_name" => "Raharditya",
+            "email" => "rahardityategar@gmail.com"
         ];
-
         return $data;
     }
 

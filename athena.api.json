@@ -4,7 +4,7 @@
   },
   "report" : {
     "format" : "html",
-    "outputDirectory" : "./Report/api"
+    "outputDirectory" : "./Report/api/"
   },
   "proxy" : {
     "connectTimeout" : 20000,
@@ -16,7 +16,7 @@
     "httpProxy" : "athena-proxy:9991",
     "sslProxy" : "athena-proxy:9991",
     "remapHosts" : {
-      "localhost": "192.168.99.1"
+      "localhost": "172.17.0.1"
     },
     "recording" : true
   },
